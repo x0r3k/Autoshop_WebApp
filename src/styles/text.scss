@@ -1,0 +1,62 @@
+@import "./colors.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.text {
+  color: $black;
+  font-family: 'Raleway', serif;
+  font-size: 1rem;
+}
+
+.light-text {
+  color: $white;
+}
+
+.dark-text {
+  color: $black;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.italic-text {
+  font-style: italic;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.url-text {
+  text-decoration: underline;
+}
+
+.mb-text {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.uppercase-text {
+  text-transform: uppercase;
+}
+
+.h1-text {
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+}
+
+.h4-text {
+  font-size: 1.5rem;
+}
+
+.heading-text {
+  font-size: 2rem;
+  // line-height: 2.5rem;
+  margin-bottom: 1.3rem;
+}
+
+.home-content-description {
+  font-size: 1.1rem;
+}

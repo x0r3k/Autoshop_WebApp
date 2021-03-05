@@ -1,0 +1,25 @@
+.bf-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bw-center {
+  position: absolute;
+  // top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.bh-center {
+  position: absolute;
+  top: 50%;
+  // left: 50%;
+  transform: translate(0, -50%);
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
