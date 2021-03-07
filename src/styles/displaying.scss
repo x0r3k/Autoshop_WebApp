@@ -125,7 +125,7 @@
 
 @media (min-width: 1200px) {
   .content-container {
-    max-width: 1140px;
+    max-width: 1120px;
   }
 }
 
@@ -134,3 +134,22 @@
     max-width: 1420px;
   }
 }
+
+///////////////////// combine min-width and min-height in one query
+// @media (max-height: 620px) {
+//   .content-container {
+//     max-width: 820px;
+//   }
+// }
+
+// @media (max-height: 660px) {
+//   .content-container {
+//     max-width: 900px;
+//   }
+// }
+
+// @media (max-height: 720px) {
+//   .content-container {
+//     max-width: 1000px;
+//   }
+// }

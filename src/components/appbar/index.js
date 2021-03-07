@@ -1,12 +1,20 @@
 import React, {useEffect, useState} from 'react';
 import './styles/style.scss';
-import SearchIcon from './img/icons/loupe.svg';
-import UserIcon from './img/icons/user.svg';
-import FavoritesIcon from './img/icons/heart.svg';
-import ShoppingCartIcon from './img/icons/shopping-cart_1.svg';
-import CarIcon from './img/icons/car_1.svg';
+import clsx from 'clsx';
+import SearchIconDark from './img/icons/loupe_dark.svg';
+import UserIconDark from './img/icons/user_dark.svg';
+import FavoritesIconDark from './img/icons/heart_dark.svg';
+import ShoppingCartIconDark from './img/icons/shopping-cart_dark.svg';
+import CarIconDark from './img/icons/car_dark.svg';
 
-import MenuIcon from './img/icons/menu.svg';
+import SearchIconLight from './img/icons/loupe_light.svg';
+import UserIconLight from './img/icons/user_light.svg';
+import FavoritesIconLight from './img/icons/heart_light.svg';
+import ShoppingCartIconLight from './img/icons/shopping-cart_light.svg';
+import CarIconLight from './img/icons/car_light.svg';
+
+import MenuIconDark from './img/icons/menu_dark.svg';
+import MenuIconLight from './img/icons/menu_light.svg';
 // import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 // import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 // import SearchIcon from '@material-ui/icons/Search';
@@ -15,40 +23,50 @@ import MenuIcon from './img/icons/menu.svg';
 
 import AppbarIcon from './components/appbarIcon';
 
-export default function Appbar({setIsSidebarOpen}) {
+export default function Appbar({setIsSidebarOpen, isAppbarCollapsed}) {
   const mockData = [
     {
       id: 'search-icon-id',
       className: 'search-icon',
-      Icon: SearchIcon,
+      icon_dark: SearchIconDark,
+      icon_light: SearchIconLight,
+      badgeNumber: null
     },
     {
       id: 'user-icon-id',
       className: 'user-icon',
-      Icon: UserIcon,
+      icon_dark: UserIconDark,
+      icon_light: UserIconLight,
+      badgeNumber: null
     },
     {
       id: 'favorites-icon-id',
       className: 'favorites-icon',
-      Icon: FavoritesIcon,
+      icon_dark: FavoritesIconDark,
+      icon_light: FavoritesIconLight,
+      badgeNumber: null
     },
     {
       id: 'shopping_cart-icon-id',
       className: 'shopping_cart-icon',
-      Icon: ShoppingCartIcon,
+      icon_dark: ShoppingCartIconDark,
+      icon_light: ShoppingCartIconLight,
+      badgeNumber: 11
     },
     {
       id: 'car-icon-id',
       className: 'car-icon',
-      Icon: CarIcon,
+      icon_dark: CarIconDark,
+      icon_light: CarIconLight,
+      badgeNumber: 2
     },
   ]
 
 
   return (
-    <nav className="appbar appbar-custom fixed-top">
-      <div className="appbar-sidebar-toggler col-5" onClick={() => setIsSidebarOpen(true)}>
-          <img src={MenuIcon} alt=""/>
+    <nav className={clsx("appbar", "appbar-custom", {"collapsed-appbar": isAppbarCollapsed})}>
+      <div className="appbar-sidebar-toggler col-5" >
+          <img src={isAppbarCollapsed ? MenuIconLight : MenuIconDark} alt="" onClick={() => setIsSidebarOpen(true)}/>
       </div>
       <a href="#" className="appbar-logo col-2">
         <span className="text bold-text">Auto</span>
@@ -61,7 +79,10 @@ export default function Appbar({setIsSidebarOpen}) {
               id={item.id}
               key={item.id}
               customClass={item.className}
-              Icon={item.Icon}
+              icon_dark={item.icon_dark}
+              icon_light={item.icon_light}
+              badgeNumber={item.badgeNumber}
+              isAppbarCollapsed={isAppbarCollapsed}
             />
           )
         }

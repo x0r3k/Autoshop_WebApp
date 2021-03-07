@@ -1,20 +1,76 @@
 import React, { useState, useEffect, useRef } from 'react';
-import TestImage from '../../img/home/home_pic_1.jpg'
+import ImageSlider from './imageSlider';
+import clsx from 'clsx';
+import HomeImage_1 from '../../img/home/home_pic_1.jpg';
+import HomeImage_2 from '../../img/home/home_pic_2.jpg';
+import HomeImage_3 from '../../img/home/home_pic_3.jpg';
+import HomeImage_4 from '../../img/home/home_pic_4.jpg';
 
+const mockData = [
+  {
+    id: 0,
+    slide_id: 'slide_1',
+    pagination_id: '01',
+    heading: 'Random heading',
+    text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, nesciunt dolorum exercitationem cumque dolorem, et laborum itaque facere pariatur id quisquam, recusandae hic ullam fugit quaerat quis ab voluptate.',
+    image: HomeImage_1,
+  },
+  {
+    id: 1,
+    slide_id: 'slide_2',
+    pagination_id: '02',
+    heading: 'Lorem ipsum',
+    text: '',
+    image: HomeImage_2,
+  },
+  {
+    id: 2,
+    slide_id: 'slide_3',
+    pagination_id: '03',
+    heading: 'New discount',
+    text: '',
+    image: HomeImage_3,
+  },
+  {
+    id: 3,
+    slide_id: 'slide_4',
+    pagination_id: '04',
+    heading: 'Check proposals',
+    text: '',
+    image: HomeImage_4,
+  }
+];
 
-export default function HeaderContent(props) {
+export default function HomePart(props) {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    let interval = setInterval(() => {
+      setCurrentSlide((currentSlide + 1) % mockData.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [currentSlide]);
+
   return (
-    <div className="home-part main-page-part full-page-vp" id="home">
-      <div className="content-container full-page-pc">
-        <div className="text-container bh-center">
-          <h1>Text</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque incidunt temporibus exercitationem doloribus, accusamus ratione quisquam molestiae quod quos eius excepturi maiores eaque aut sed quibusdam ipsa rem praesentium quasi.</p>
-        </div>
-        <div className="flex-row full-page-pc" style={{justifyContent:"flex-end"}}>
-          <div className="image-container">
-            <img src={TestImage} alt="" />
-          </div>
-        </div>
+    <div className="home-part" id="home">
+      
+      <ImageSlider config={mockData} currentSlide={currentSlide}/>
+
+      <div className="swiper-pagination bh-center flex-column">
+        {
+          mockData.map(item => {
+            return (
+              <span 
+                key={item.pagination_id}
+                className={clsx('swiper-pagination-bullet', 'flex-row', 'flex-center', {'active': currentSlide === item.id})}
+                onClick={() => setCurrentSlide(item.id)}
+              >
+                {item.pagination_id}
+              </span>
+            )
+          })
+        }
       </div>
     </div>
   );
