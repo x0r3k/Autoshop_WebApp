@@ -1,0 +1,17 @@
+@import '../../../styles/colors.scss';
+
+.footer {
+
+  .footer-blocks {
+
+    .footer-block {
+      // padding: fds;
+
+      &.footer-copyright {
+        background-color: $black;
+        color: $light_gray;
+        padding: 1rem;
+      }
+    }
+  }
+}

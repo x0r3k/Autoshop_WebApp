@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import './styles/index.scss';
 import Appbar from '../../components/appbar';
 import Sidebar from '../../components/sidebar';
+import Footer from '../../components/footer';
 import HomePart from './components/home/homePart';
 
 export default function MainPage(props) {
@@ -28,10 +29,10 @@ export default function MainPage(props) {
       <Appbar setIsSidebarOpen={setIsSidebarOpen} isAppbarCollapsed={isAppbarCollapsed} />
       <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
       <HomePart />
+      {/* <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab deleniti quaerat velit? Illum quidem velit necessitatibus officiis libero totam vero, maiores cupiditate, tempora expedita culpa quisquam. Deleniti, architecto error?</div>
       <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab deleniti quaerat velit? Illum quidem velit necessitatibus officiis libero totam vero, maiores cupiditate, tempora expedita culpa quisquam. Deleniti, architecto error?</div>
-      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab deleniti quaerat velit? Illum quidem velit necessitatibus officiis libero totam vero, maiores cupiditate, tempora expedita culpa quisquam. Deleniti, architecto error?</div>
-      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab deleniti quaerat velit? Illum quidem velit necessitatibus officiis libero totam vero, maiores cupiditate, tempora expedita culpa quisquam. Deleniti, architecto error?</div>
-
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab deleniti quaerat velit? Illum quidem velit necessitatibus officiis libero totam vero, maiores cupiditate, tempora expedita culpa quisquam. Deleniti, architecto error?</div> */}
+      <Footer/>
     </div>
   );
 }

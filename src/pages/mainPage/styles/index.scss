@@ -23,6 +23,37 @@
   position: relative;
 }
 
+//SLIDER RESPONSIVE CONTAINER
+.slide-container {
+  margin: 0 auto;
+  width: 100%;  
+}
+
+@media (min-width: 768px) {
+  .slide-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .slide-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .slide-container {
+    max-width: 1120px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .slide-container {
+    max-width: 1420px;
+  }
+}
+
+
 //HOME PART -> IMAGE CONTAINER
 
 .image-container {
@@ -72,7 +103,7 @@
   }
 }
 
-
+//slider pagination
 .swiper-pagination {
   position: absolute;
   right: 2rem;

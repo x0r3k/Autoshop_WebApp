@@ -111,45 +111,26 @@
 
 //MEDIA QUERIES
 
-@media (min-width: 768px) {
-  .content-container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .content-container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .content-container {
-    max-width: 1120px;
-  }
-}
-
-@media (min-width: 1500px) {
-  .content-container {
-    max-width: 1420px;
-  }
-}
-
-///////////////////// combine min-width and min-height in one query
-// @media (max-height: 620px) {
+// @media (min-width: 768px) {
 //   .content-container {
-//     max-width: 820px;
+//     max-width: 720px;
 //   }
 // }
 
-// @media (max-height: 660px) {
+// @media (min-width: 992px) {
 //   .content-container {
-//     max-width: 900px;
+//     max-width: 960px;
 //   }
 // }
 
-// @media (max-height: 720px) {
+// @media (min-width: 1200px) {
 //   .content-container {
-//     max-width: 1000px;
+//     max-width: 1120px;
+//   }
+// }
+
+// @media (min-width: 1500px) {
+//   .content-container {
+//     max-width: 1420px;
 //   }
 // }
