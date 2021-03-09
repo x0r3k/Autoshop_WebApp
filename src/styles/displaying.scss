@@ -40,10 +40,8 @@
 
 //BLOCK SIZES
 .content-container {
-  margin: 0 auto;
   width: 100%;
-  // padding: 0 15px;
-  box-sizing: border-box;
+  padding: 0 4rem;
 }
 
 .col-12 {
@@ -108,6 +106,11 @@
   box-sizing: border-box;
 }
 
+//MARGIN 
+
+.mg-10 {
+  margin-bottom: 10px;
+}
 
 //MEDIA QUERIES
 

@@ -22,8 +22,6 @@ export default function MainPage(props) {
     }
   };
 
-  // window.addEventListener('scroll', appbarScrollCollapse, true);
-
   return (
     <div id="mainPage" ref={mainPageRef} onScroll={appbarScrollCollapse}>
       <Appbar setIsSidebarOpen={setIsSidebarOpen} isAppbarCollapsed={isAppbarCollapsed} />
