@@ -5,17 +5,22 @@
   .footer-blocks {
 
     .footer-block {
-      color: $light_gray;
+      color: $gray;
       font-size: 12px;
       width: 100%;
       // padding: 0 15%;
       .footer-heading {
         text-transform: uppercase;
         font-weight: bold;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
       }
 
       .footer-text {
         line-height: 22px;
+        color: $gray1;
+        font-size: 14px;
       }
 
       .footer-links {
@@ -24,11 +29,12 @@
         align-items: flex-start;
 
         .footer-link {
-          // display: flex;
+          font-size: 14px;
           text-decoration: none;
-          color: $light_gray;
+          color: $gray1;
           line-height: 22px;
           transition: color .3s;
+          padding-bottom: 3px;
 
           &:hover {
             color: #ffffff;
@@ -43,6 +49,37 @@
         border-bottom-width: 1px;
         border-bottom-color: rgba(159,159,159,0.1);
         border-bottom-style: solid;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .footer-input-wrapper {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          input {
+            background-color: $dark_gray;
+            border: 1px solid $dark_gray;
+            padding: 5px 118px 5px 12px;
+            font-size: 13px;
+            color: $gray;
+          }
+
+          button {
+            min-height: 32px;
+            border: none;
+            background-color: $dark_gray;
+            color: $gray1;
+            transition: color .3s;
+            padding: 3px 20px;
+
+            &:hover {
+              color: #ffffff;
+            }
+          }
+        }
       }
       
       &.footer-information {
@@ -88,6 +125,6 @@
 
 @media (min-width: 1500px) {
   .footer-block {
-    padding: 0 20%;
+    padding: 0 15%;
   }
 }

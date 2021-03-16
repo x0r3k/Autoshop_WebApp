@@ -6,23 +6,23 @@ export default function Footer(props) {
       <div className="footer-blocks">
         <div className="footer-block footer-contacts flex-row">
           <div className="col-7 flex-row">
-            <div className="footer-heading">
+            <div className="footer-heading text bold-text mg-right-10">
               LAST CHANCE TO WIN OUR DISCOUNT!
             </div>
             <div className="footer-input-wrapper">
-              <input type="text" name="" id=""/>
-              <button>Subscribe</button>
+              <input type="text" name="" id="" className="text"/>
+              <button className="text uppercase-text">Subscribe</button>
             </div>
           </div>
           <div className="col-5">
-            <div className="footer-heading">
+            <div className="footer-heading text" style={{justifyContent: "flex-end"}}>
               ON SOCIAL NETWORKS
             </div>
           </div>
         </div>
         <div className="footer-block footer-information">
           <div>
-            <div className="footer-heading mg-10">
+            <div className="footer-heading mg-bottom-10">
               Autoshop
             </div>
             <p className="footer-text text">
@@ -30,18 +30,22 @@ export default function Footer(props) {
             </p>
           </div>
           <div>
-            <div className="footer-heading mg-10">
+            <div className="footer-heading mg-bottom-10">
               Categories
             </div>
             <div className="footer-links">
               <a href="" className="footer-link text">Brake system</a>
               <a href="" className="footer-link text">Engine and exhaust system</a>
               <a href="" className="footer-link text">Suspension and steering</a>
+              <a href="" className="footer-link text">Transmission</a>
+              <a href="" className="footer-link text">Cooling and heating</a>
+              <a href="" className="footer-link text">Electrics and lighting</a>
+              <a href="" className="footer-link text">Body and components</a>
+              <a href="" className="footer-link text">Auto-chemical goods</a>
             </div>
-
           </div>
           <div>
-            <div className="footer-heading mg-10">
+            <div className="footer-heading mg-bottom-10">
               Customer
             </div>
             <div className="footer-links">
@@ -54,7 +58,7 @@ export default function Footer(props) {
 
           </div>
           <div>
-            <div className="footer-heading mg-10">
+            <div className="footer-heading mg-bottom-10">
               Company
             </div>
             <div className="footer-links">
@@ -67,7 +71,7 @@ export default function Footer(props) {
           </div>
         </div>
         <div className="footer-block footer-copyright center-text gray-text">
-          <div className="col-12">
+          <div className="col-12 text">
             Copyright © 2021 Autoshop, Inc. All Rights Reserved
           </div>
         </div>

@@ -24,6 +24,24 @@ html,
   box-sizing: border-box;
 }
 
+input, button {
+  outline: none;
+}
+
+.btn {
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  padding: 7px 25px;
+  border: 2px solid black;
+  transition: background 0.3s, color 0.3s;
+
+  &:hover {
+    background: white;
+    color: black;
+  }
+}
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 18px;
 }

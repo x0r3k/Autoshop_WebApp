@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import ImageSlider from './imageSlider';
+import ImageSlider from './ImageSlider';
 import clsx from 'clsx';
 import HomeImage_1 from '../../img/home/home_pic_1.jpg';
 import HomeImage_2 from '../../img/home/home_pic_2.jpg';
@@ -53,7 +53,7 @@ export default function HomePart(props) {
   }, [currentSlide]);
 
   return (
-    <div className="home-part" id="home">
+    <section className="home-part" id="home">
       
       <ImageSlider config={mockData} currentSlide={currentSlide}/>
 
@@ -72,6 +72,6 @@ export default function HomePart(props) {
           })
         }
       </div>
-    </div>
+    </section>
   );
 }

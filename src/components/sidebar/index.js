@@ -2,9 +2,12 @@ import React from 'react';
 import './styles/style.scss';
 import clsx from 'clsx';
 
+const catgoriesData = [
+  'Brake system', 'Engine and exhaust system', 'Suspension and steering', 'Transmission', 
+  'Cooling and heating', 'Electrics and lighting', 'Body and components', 'Auto-chemical goods'
+]
+
 export default function Sidebar ({setIsOpen, isOpen}) {
-
-
 
   return (
     <div className="sidebar-wrapper">
@@ -12,21 +15,15 @@ export default function Sidebar ({setIsOpen, isOpen}) {
         
         <div className="sidebar-block">
           <div className="sidebar-block-heading bold-text uppercase-text">Categories</div>
-          <div className="sidebar-block-item text">
-            <a href="">
-              Brake system
-            </a>
-          </div>
-          <div className="sidebar-block-item text">
-            <a href="">
-              Engine and exhaust system
-            </a>
-          </div>
-          <div className="sidebar-block-item text">
-            <a href="">
-              Suspension and steering
-            </a>
-          </div>
+          {
+            catgoriesData.map(item => {
+              return (
+                <div className="sidebar-block-item text">
+                  <a href="">{item}</a>
+                </div>
+              )
+            })
+          }
         </div>
         <div className="sidebar-divider"></div>
         <div className="sidebar-block">

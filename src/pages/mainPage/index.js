@@ -3,7 +3,10 @@ import './styles/index.scss';
 import Appbar from '../../components/appbar';
 import Sidebar from '../../components/sidebar';
 import Footer from '../../components/footer';
-import HomePart from './components/home/homePart';
+import HomePart from './components/home/HomePart';
+import TopDealsPart from './components/topDeals/TopDeals';
+import DealOfWeek from './components/dealOfWeek/DealOfWeek';
+import Partners from './components/partners/Partners';
 
 export default function MainPage(props) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -27,9 +30,9 @@ export default function MainPage(props) {
       <Appbar setIsSidebarOpen={setIsSidebarOpen} isAppbarCollapsed={isAppbarCollapsed} />
       <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
       <HomePart />
-      {/* <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab deleniti quaerat velit? Illum quidem velit necessitatibus officiis libero totam vero, maiores cupiditate, tempora expedita culpa quisquam. Deleniti, architecto error?</div>
-      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab deleniti quaerat velit? Illum quidem velit necessitatibus officiis libero totam vero, maiores cupiditate, tempora expedita culpa quisquam. Deleniti, architecto error?</div>
-      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab deleniti quaerat velit? Illum quidem velit necessitatibus officiis libero totam vero, maiores cupiditate, tempora expedita culpa quisquam. Deleniti, architecto error?</div> */}
+      <TopDealsPart/>
+      <DealOfWeek/>
+      <Partners/>
       <Footer/>
     </div>
   );
