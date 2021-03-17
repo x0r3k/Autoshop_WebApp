@@ -1,0 +1,39 @@
+@import '../../../styles/colors.scss';
+
+#productPage {
+  overflow-y: auto;
+  height: 100%;
+  position: relative;
+}
+
+.product-wrapper {
+  background-color: $light_gray;
+  padding: 6rem 3rem 0rem 3rem;
+
+  .product-main-part {
+    padding: 3rem 6rem;
+    width: 100%;
+    .product-photos {
+      display: flex; //change to grid 1fr 1fr
+      flex-direction: row;
+      width: 50%;
+      .product-photos-mini {
+        display: flex;
+        flex-direction: column;
+        padding-right: 1rem;
+        img {
+          width: 100px;
+          height: auto;
+          padding-bottom: 1rem;
+        }
+      }
+
+      .product-photos-main {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
