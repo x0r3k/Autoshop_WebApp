@@ -34,22 +34,22 @@ export default function Authorization(props) {
             <p className="divider-text text light-weight-text">or</p>
             <div className="divider-line"></div>
           </div>
-          <div className="authentication-input-wrapper">
+          <div className="form-input-wrapper">
             <label htmlFor="" className="text-input-label text light-weight-text">Email*</label>
-            <input type="text" className="authentication-input text" placeholder="test_email@mail.com"/>
+            <input type="text" className="form-input text" placeholder="test_email@mail.com"/>
           </div>
-          <div className="authentication-input-wrapper">
+          <div className="form-input-wrapper">
             <label htmlFor="" className="text-input-label text light-weight-text">Password*</label>
-            <div className="authentication-input-with-icon">
-              <input type="text" className="authentication-input text" placeholder="testPassword123"/>
-              <div className="authentication-input-icon">
+            <div className="form-input-with-icon">
+              <input type="text" className="form-input text" placeholder="testPassword123"/>
+              <div className="form-input-icon">
                 <img src={ShowIcon} alt="" />
               </div>
             </div>
             
           </div>
-          <div className="flex-row authentication-input-wrapper checkbox-input">
-            <div className="authentication-checkbox"/>
+          <div className="flex-row form-input-wrapper checkbox-input">
+            <div className="form-checkbox"/>
             <label htmlFor="" className="text-input-label text light-weight-text">Remember credentials</label>
           </div>
           <button className="btn text uppercase-text medium-weight-text">Sign in</button>

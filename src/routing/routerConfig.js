@@ -4,6 +4,7 @@ import RegistrationPage from '../pages/authentication/register';
 import VehiclePage from '../pages/vehiclePage';
 import CategoryPage from '../pages/categoryPage';
 import ProductPage from '../pages/productPage';
+import OrderPage from '../pages/orderPage';
 
 export default [
   {
@@ -40,6 +41,12 @@ export default [
     id: 6,
     Component: ProductPage,
     path: '/product',
+    isPrivate: false
+  },
+  {
+    id: 7,
+    Component: OrderPage,
+    path: '/order',
     isPrivate: false
   }
 ]

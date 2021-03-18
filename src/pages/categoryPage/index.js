@@ -78,7 +78,7 @@ export default function CategoryPage(props) {
           </div>
           <div className="flex-row">
             <div className="category-page-title text uppercase-text bold-text">
-              Top deals
+              Products
             </div>
           </div>
 
