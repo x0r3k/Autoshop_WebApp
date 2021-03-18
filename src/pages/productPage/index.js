@@ -55,16 +55,32 @@ export default function ProductPage(props) {
               
             </div>
             <div className="product-main-info">
-              <div className="main-info-title"></div>
-              <div className="flex-row"> {/*space between */}
-                <div className="main-info-rating"></div>
-                <div className="main-info-scu"></div>
+              <div className="main-info-title bold-text">ACDelco Advantage Battery 24S Group Size 24 600 CCA</div>
+              <div className="flex-row" style={{justifyContent: 'space-between'}}> {/*space between */}
+                <div className="main-info-rating">Stars rating</div>
+                <div className="main-info-scu"><span>SKU #338292</span></div>
               </div>
-              <div className="flex-row">
-                <div className="main-info-price"></div>
-                <div className="main-info-part_number"></div>
+              <div className="flex-row" style={{justifyContent: 'space-between'}}>
+                <div className="main-info-price">
+                  <span>$2,500.00</span>
+                </div>
+                <div className="main-info-part_number"><span>Part #H5-AGM</span></div>
               </div>
               <div className="main-info-divider"></div>
+              <p className="main-info-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the standard dummy text. 
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </p>
+              <div className="main-info-divider"></div>
+              <div className="flex-row main-info-quantity">
+                <div className="quantity-picker">
+                  <input type="text" className="grid-item quantity-picker-input"/>
+                  <button className="grid-item quantity-picker-button plus-button">+</button>
+                  <button className="grid-item quantity-picker-button minus-button">-</button>
+                </div>
+                <button className="btn text uppercase-text medium-weight-text">ADD TO CART </button>
+              </div>
             </div>
           </div>
         </div>
