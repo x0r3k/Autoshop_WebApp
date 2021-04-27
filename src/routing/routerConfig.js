@@ -1,10 +1,10 @@
-import MainPage from '../pages/mainPage';
-import AuthorizationPage from '../pages/authentication/auth';
-import RegistrationPage from '../pages/authentication/register';
-import VehiclePage from '../pages/vehiclePage';
-import CategoryPage from '../pages/categoryPage';
-import ProductPage from '../pages/productPage';
-import OrderPage from '../pages/orderPage';
+import MainPage from '../pages/main';
+import SignInPage from '../pages/authentication/signIn';
+import SignUpPage from '../pages/authentication/signUp';
+import VehiclePage from '../pages/vehicle';
+import CategoryPage from '../pages/category';
+import ProductPage from '../pages/product';
+import OrderPage from '../pages/order';
 
 export default [
   {
@@ -15,13 +15,13 @@ export default [
   },
   {
     id: 2,
-    Component: AuthorizationPage,
+    Component: SignInPage,
     path: '/auth',
     isPrivate: false
   },
   {
     id: 3,
-    Component: RegistrationPage,
+    Component: SignUpPage,
     path: '/register',
     isPrivate: false
   },
