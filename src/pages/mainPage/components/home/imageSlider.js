@@ -14,7 +14,7 @@ export default function ImageSlider({ config, currentSlide }) {
       {
         config.map(item => {
           return (
-            <div className="main-page-part full-height-vp" key={item.slide_id} >
+            <div key={item.slide_id} >
               <div className="slide-container full-page-pc">
                 <div className="text-container outer-text-container bh-center">
                   <div className="inner-text-container">

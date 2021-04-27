@@ -14,14 +14,15 @@ export default function MainPage(props) {
   const mainPageRef = useRef();
 
   const appbarScrollCollapse = () => {
+    // console.log(123);
     let scrollTop = mainPageRef.current.scrollTop;
-    if(scrollTop > 50 && !isAppbarCollapsed) {
+    if(scrollTop != 0 && !isAppbarCollapsed) {
       setIsAppbarCollapsed(true);
-      console.log('collapsed')
+      // console.log('collapsed')
     }
-    else if(scrollTop <= 50 && isAppbarCollapsed){
+    else if(scrollTop == 0 && isAppbarCollapsed){
       setIsAppbarCollapsed(false);
-      console.log('not-collapsed')
+      // console.log('not-collapsed')
     }
   };
 

@@ -36,13 +36,13 @@ export default function Appbar({setIsSidebarOpen, isAppbarCollapsed, simpleAppba
       icon_light: UserIconLight,
       badgeNumber: null
     },
-    {
-      id: 'favorites-icon-id',
-      className: 'favorites-icon',
-      icon_dark: FavoritesIconDark,
-      icon_light: FavoritesIconLight,
-      badgeNumber: null
-    },
+    // {
+    //   id: 'favorites-icon-id',
+    //   className: 'favorites-icon',
+    //   icon_dark: FavoritesIconDark,
+    //   icon_light: FavoritesIconLight,
+    //   badgeNumber: null
+    // },
     {
       id: 'shopping_cart-icon-id',
       className: 'shopping_cart-icon',
