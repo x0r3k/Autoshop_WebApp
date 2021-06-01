@@ -5,6 +5,7 @@ import VehiclePage from '../pages/vehicle';
 import CategoryPage from '../pages/category';
 import ProductPage from '../pages/product';
 import OrderPage from '../pages/order';
+import TestPage from '../pages/test';
 
 export default [
   {
@@ -47,6 +48,12 @@ export default [
     id: 7,
     Component: OrderPage,
     path: '/order',
+    isPrivate: false
+  },
+  {
+    id: 8,
+    Component: TestPage,
+    path: '/test',
     isPrivate: false
   }
 ]
