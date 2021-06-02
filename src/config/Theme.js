@@ -42,6 +42,11 @@ let theme = createMuiTheme({
           color: "red",
         },
       },
+    },
+    MuiSelect: {
+      icon: {
+        color: 'black'
+      }
     }
   },
 });

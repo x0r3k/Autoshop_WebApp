@@ -43,7 +43,10 @@ export default function TestPage(props) {
         <TextField variant="outlined" />
       </div>
       <div className="selects">
-        <CustomSelect variant="outlined"/>
+        <div style={{width: "200px"}}>
+          <CustomSelect variant="outlined" styleType="simple"/>
+        </div>
+        
       </div>
     </div>
   )

@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
     '& .MuiOutlinedInput-input': {
       padding: '10px',
       fontFamily: 'Poppins, sans-serif',
-      fontSize: '0.75rem',
+      fontSize: '0.9rem',
       fontWeight: '400',
       '&::placeholder': {
         color: 'grey',
