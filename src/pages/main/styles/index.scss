@@ -124,8 +124,66 @@
       grid-gap: 20px;
 
       .partners-card {
-        height: 100px;
-        background-color: $gray;
+        cursor: pointer;
+        height: 300px;
+        width: 100%;
+        background-color: $light_gray1;
+        position: relative;
+
+        .partners_image-container {
+          width: 100%;
+          height: 120px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            vertical-align: middle;
+          }
+        }
+
+        .partners_information {
+          width: 100%;
+          height: 180px;
+          position: absolute;
+          padding: 15px;
+          bottom: 0;
+          z-index: 100;
+          transition: all 0.2s;
+          
+          .heading {
+            background-color: black;
+            width: 100%;
+            height: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .content {
+            background-color: white;
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        .partners_overlay {
+          width: 100%;
+          height: 100%;
+          top: 0;
+          position: absolute;
+          background-color: transparent;
+          transition: all 0.2s;
+        }
+        &:hover {
+          .partners_information {
+            bottom: 20px;
+          }
+          .partners_overlay {
+            background-color: black;
+            opacity: 0.5;
+          }
+        }
       }
     }
   }

@@ -1,4 +1,9 @@
+import React from 'react';
 import './styles/index.scss';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 export default function Footer(props) {
   return (
@@ -16,8 +21,15 @@ export default function Footer(props) {
           </div>
           <div className="col-5">
             <div className="footer-heading text" style={{justifyContent: "flex-end"}}>
-              ON SOCIAL NETWORKS
+              <span className="mg-right-10">
+                ON SOCIAL NETWORKS
+              </span>
+              <InstagramIcon className="mg-right-10"/>
+              <FacebookIcon className="mg-right-10"/>
+              <TwitterIcon className="mg-right-10"/>
+              <LinkedInIcon className="mg-right-10"/>
             </div>
+            
           </div>
         </div>
         <div className="footer-block footer-information">
