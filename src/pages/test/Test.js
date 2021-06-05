@@ -8,6 +8,9 @@ import CustomCheckbox from '../../components/checkbox';
 import CustomInput from '../../components/input';
 import CustomSelect from '../../components/select';
 
+import Badge from '@material-ui/core/Badge';
+import MailIcon from '@material-ui/icons/Mail';
+
 export default function TestPage(props) {
   const [state, setState] = useState({
     checkedA: true,
@@ -46,8 +49,10 @@ export default function TestPage(props) {
         <div style={{width: "200px"}}>
           <CustomSelect variant="outlined" styleType="simple"/>
         </div>
-        
       </div>
+      <Badge badgeContent={0} color="secondary">
+        <MailIcon />
+      </Badge>
     </div>
   )
 }

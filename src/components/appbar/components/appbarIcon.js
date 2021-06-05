@@ -1,22 +1,39 @@
-import React, {useEffect} from 'react';
-// import clsx from 'clsx';
+import React, { useEffect } from 'react';
+import Badge from '@material-ui/core/Badge';
+import { makeStyles } from '@material-ui/core';
+import clsx from 'clsx';
 
-export default function AppbarIcon({id, customClass, icon_dark, icon_light, badgeNumber, isAppbarCollapsed}) {
+const useStyles = makeStyles(theme => ({
+  lightIcon: {
+    color: 'white',
+  },
+  darkIcon: {
+    color: 'black',
+  },
+  icon: {
+    fontSize: '1.6rem'
+  },
+  lightBadge: {
+    color: 'black',
+    backgroundColor: 'white'
+  },
+  darkBadge: {
+    color: 'white',
+    backgroundColor: 'black'
+  },
+}));
+
+export default function AppbarIcon({ id, Icon, badgeNumber, isAppbarCollapsed }) {
+  const classes = useStyles();
 
   return (
     <div className="appbar-icon">
-      <div className={customClass}>
-        <a href="">
-          <img src={isAppbarCollapsed ? icon_light : icon_dark}></img>
-        </a>
-      </div>
-      {
-        badgeNumber && (
-          <span className="appbar-icon-badge">
-            {badgeNumber > 9 ? "9+" : badgeNumber}
-          </span>
-        )
-      }
+      <Badge badgeContent={badgeNumber || 0} color="primary" max={9} classes={{
+        badge: isAppbarCollapsed ? classes.lightBadge : classes.darkBadge
+      }}>
+        <Icon className={clsx(isAppbarCollapsed ? classes.lightIcon : classes.darkIcon, classes.icon)}/>
+      </Badge>
     </div>
+    
   );
 }

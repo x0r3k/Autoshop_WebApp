@@ -1,64 +1,51 @@
 import React, {useEffect, useState} from 'react';
 import './styles/style.scss';
 import clsx from 'clsx';
-import SearchIconDark from './img/icons/loupe_dark.svg';
-import UserIconDark from './img/icons/user_dark.svg';
-import FavoritesIconDark from './img/icons/heart_dark.svg';
-import ShoppingCartIconDark from './img/icons/shopping-cart_dark.svg';
-import CarIconDark from './img/icons/car_dark.svg';
-
-import SearchIconLight from './img/icons/loupe_light.svg';
-import UserIconLight from './img/icons/user_light.svg';
-import FavoritesIconLight from './img/icons/heart_light.svg';
-import ShoppingCartIconLight from './img/icons/shopping-cart_light.svg';
-import CarIconLight from './img/icons/car_light.svg';
-
+import useStyles from './styles/style';
 import MenuIconDark from './img/icons/menu_dark.svg';
 import MenuIconLight from './img/icons/menu_light.svg';
-
 import BackIconDark from './img/icons/arrow_left.svg';
-
 import AppbarIcon from './components/appbarIcon';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import SearchSharpIcon from '@material-ui/icons/SearchSharp';
+import ShoppingCartSharpIcon from '@material-ui/icons/ShoppingCartSharp';
+import DriveEtaSharpIcon from '@material-ui/icons/DriveEtaSharp';
+
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+
+const mockData = [
+  {
+    id: 'search-icon-id',
+    className: 'search-icon',
+    Icon: SearchSharpIcon,
+    badgeNumber: null
+  },
+  {
+    id: 'user-icon-id',
+    className: 'user-icon',
+    Icon: AccountCircleIcon,
+    badgeNumber: null
+  },
+  {
+    id: 'shopping_cart-icon-id',
+    className: 'shopping_cart-icon',
+    Icon: ShoppingCartSharpIcon,
+    badgeNumber: 11
+  },
+  {
+    id: 'car-icon-id',
+    className: 'car-icon',
+    Icon: DriveEtaSharpIcon,
+    badgeNumber: 2
+  },
+]
 
 export default function Appbar({setIsSidebarOpen, isAppbarCollapsed, simpleAppbar}) {
-  const mockData = [
-    {
-      id: 'search-icon-id',
-      className: 'search-icon',
-      icon_dark: SearchIconDark,
-      icon_light: SearchIconLight,
-      badgeNumber: null
-    },
-    {
-      id: 'user-icon-id',
-      className: 'user-icon',
-      icon_dark: UserIconDark,
-      icon_light: UserIconLight,
-      badgeNumber: null
-    },
-    // {
-    //   id: 'favorites-icon-id',
-    //   className: 'favorites-icon',
-    //   icon_dark: FavoritesIconDark,
-    //   icon_light: FavoritesIconLight,
-    //   badgeNumber: null
-    // },
-    {
-      id: 'shopping_cart-icon-id',
-      className: 'shopping_cart-icon',
-      icon_dark: ShoppingCartIconDark,
-      icon_light: ShoppingCartIconLight,
-      badgeNumber: 11
-    },
-    {
-      id: 'car-icon-id',
-      className: 'car-icon',
-      icon_dark: CarIconDark,
-      icon_light: CarIconLight,
-      badgeNumber: 2
-    },
-  ]
-
+  const classes = useStyles();
+  const [language, setLanguage] = useState('UA');
 
   return (
     <nav className={clsx("appbar", "appbar-custom", {"collapsed-appbar": isAppbarCollapsed})}>
@@ -94,14 +81,26 @@ export default function Appbar({setIsSidebarOpen, isAppbarCollapsed, simpleAppba
         )
         : (
           <div className="appbar-items col-5">
+            <FormControl className={clsx(isAppbarCollapsed ? classes.lightLanguageSelect : classes.darkLanguageSelect)}>
+              <Select
+                id="demo-customized-select"
+                value={language}
+                onChange={(event) => setLanguage(event.target.value)}
+                IconComponent={KeyboardArrowDownIcon}
+              >
+                <MenuItem value={"UA"}>UA</MenuItem>
+                <MenuItem value={"RU"}>RU</MenuItem>
+                <MenuItem value={"EN"}>EN</MenuItem>
+              </Select>
+            </FormControl>
             {
               mockData.map((item) => 
                 <AppbarIcon
                   id={item.id}
                   key={item.id}
-                  customClass={item.className}
-                  icon_dark={item.icon_dark}
-                  icon_light={item.icon_light}
+                  // customClass={item.className}
+                  Icon={item.Icon}
+                  // icon_light={item.icon_light}
                   badgeNumber={item.badgeNumber}
                   isAppbarCollapsed={isAppbarCollapsed}
                 />

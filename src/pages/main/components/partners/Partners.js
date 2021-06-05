@@ -12,7 +12,7 @@ const cardConfig = [
     id: 1,
     image: BoschImage,
     heading: 'Bosch',
-    text: 'Bosch represent the latest in design following our 100+ year history of Automotive, Industrial, and Racing products.'
+    text: 'Bosch represent the latest in design following our 100+ year history of Automotive, Industrial, and Racing products.ffffff ffffffffffffff ffffffff ffffff fff fffff'
   },
   {
     id: 2,
