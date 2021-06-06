@@ -4,7 +4,7 @@ import { unstable_createMuiStrictModeTheme as createMuiTheme } from "@material-u
 let theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#0f0",
+      main: "#000",
     },
     secondary: {
       main: "#ddd",
@@ -45,6 +45,11 @@ let theme = createMuiTheme({
     },
     MuiSelect: {
       icon: {
+        color: 'black'
+      }
+    },
+    MuiSvgIcon: {
+      root: {
         color: 'black'
       }
     }
