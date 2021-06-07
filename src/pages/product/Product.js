@@ -65,7 +65,7 @@ export default function ProductPage(props) {
             </div>
             <div className="product-main-info">
               <div className="main-info-title bold-text">ACDelco Advantage Battery 24S Group Size 24 600 CCA</div>
-              <div className="flex-row" style={{ justifyContent: 'space-between' }}> {/*space between */}
+              <div className="flex-row" style={{ justifyContent: 'space-between' }}>
                 <div className="main-info-rating">Stars rating</div>
                 <div className="main-info-scu"><span className="text">SKU #338292</span></div>
               </div>

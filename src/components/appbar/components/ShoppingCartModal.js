@@ -7,6 +7,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import Typography from '@material-ui/core/Typography';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
+import ShoppingCartProduct from './ShoppingCartProduct';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import RemoveShoppingCartSharpIcon from '@material-ui/icons/RemoveShoppingCartSharp';
@@ -17,8 +18,18 @@ import Photo2 from '../../../assets/images/battery_4.jpg';
 import clsx from 'clsx';
 
 const data = [{
-
-}];
+  image: Photo1,
+  title: 'ACDelco Advantage Battery 24FS Group Size 24F 600 CCA',
+  amount: 1,
+  price: 2500
+},
+{
+  image: Photo2,
+  title: 'ACDelco Advantage Battery 24S Group Size 24 600 CCA',
+  amount: 2,
+  price: 2500
+}
+];
 
 const useStyles = makeStyles(theme => ({
   dialogTitle: {
@@ -32,20 +43,6 @@ const useStyles = makeStyles(theme => ({
     top: theme.spacing(1),
     color: theme.palette.grey[500],
   },
-  cartProductImage: {
-    width: '10%',
-    minWidth: '100px',
-    "& img": {
-      width: '100%',
-    }
-  },
-  cartProductName: {
-    marginLeft: '15px',
-    flexGrow: 1,
-    "& span": {
-      fontSize: '14px',
-    }
-  }
 }));
 
 export default function ShoppingCartModal({ isOpen, setOpen }) {
@@ -71,31 +68,46 @@ export default function ShoppingCartModal({ isOpen, setOpen }) {
         </IconButton>
       </MuiDialogTitle>
       <DialogContent>
-        <div className="cart_products">
-          <div className="cart_product flex-row flex-align-center">
+        {/* <div className="cart_products">
+          <div className="cart_product flex-row">
             <div className={clsx("cart_product-image", classes.cartProductImage)}>
               <img src={Photo1} alt="" />
             </div>
-            <div className={clsx("cart_product-name", classes.cartProductName)}>
+            <div className={clsx("cart_product-name", "flex", "flex-align-center", classes.cartProductName)}>
               <span className="text medium-weight-text">
                 ACDelco Advantage Battery 24FS Group Size 24F 600 CCA
               </span>
             </div>
-            <div className="cart_product-amount flex-column flex-center">
+            <div className={clsx("cart_product-amount", "flex-column", classes.amountTotal)}>
               <span className="title text">Quantity</span>
-              <span className="value text">1</span>
+              <div className={classes.quantityPicker}>
+                <input type="text" className="grid-item quantity-picker-input" value={1} />
+                <button className="grid-item quantity-picker-button plus-button">+</button>
+                <button className="grid-item quantity-picker-button minus-button">-</button>
+              </div>
             </div>
-            <div className="cart_product-total flex-column flex-center">
+            <div className={clsx("cart_product-total", "flex-column", classes.amountTotal)}>
               <span className="title text">Total</span>
               <span className="value text">$2,500.00</span>
             </div>
-            <div className="cart_product-remove">
+            <div className="cart_product-remove flex flex-align-center">
               <IconButton>
                 <RemoveShoppingCartSharpIcon />
               </IconButton>
             </div>
           </div>
-        </div>
+        </div> */}
+        {data.map(item => {
+            return (
+              <ShoppingCartProduct 
+                image={item.image} 
+                title={item.title}
+                amount={item.amount}
+                price={item.price}
+              />
+            )
+          }
+        )}
 
       </DialogContent>
       <DialogActions>
