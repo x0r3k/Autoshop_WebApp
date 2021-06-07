@@ -24,10 +24,10 @@ export default function Footer(props) {
               <span className="mg-right-10">
                 ON SOCIAL NETWORKS
               </span>
-              <InstagramIcon className="mg-right-10"/>
-              <FacebookIcon className="mg-right-10"/>
-              <TwitterIcon className="mg-right-10"/>
-              <LinkedInIcon className="mg-right-10"/>
+              <InstagramIcon className="mg-right-10 icon"/>
+              <FacebookIcon className="mg-right-10 icon"/>
+              <TwitterIcon className="mg-right-10 icon"/>
+              <LinkedInIcon className="mg-right-10 icon"/>
             </div>
             
           </div>
