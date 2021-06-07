@@ -13,7 +13,7 @@
       grid-template-columns: repeat(3, minmax(60px, 1fr));
       grid-gap: 20px;
 
-      .top-deals-card {
+      .top-deals_card {
         width: 100%;
         height: 150px;
         background-color: $sand;
@@ -27,8 +27,8 @@
           font-size: 1rem;
         }
 
-        .top-deal-image-container {
-          width: 30%;
+        .top-deal_image-container {
+          width: 35%;
           height: 100%;
           padding: 5px;
 
@@ -38,6 +38,9 @@
             object-fit: cover;
             vertical-align: middle;
           }
+        }
+        .top-deal_main-info {
+          width: 65%;
         }
       }
     }
